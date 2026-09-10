@@ -25,6 +25,8 @@ class Gm2048:
         self.reset_color = '\033[0m' #Text color 
         self.tile()  # Game starts with two tiles
         self.tile()  # call Func twice
+        self.won = False
+        self.target = 2048
     
     #Spawn Tiles
     def tile(self):
@@ -144,9 +146,19 @@ class Gm2048:
                     return False
         return True
 
+    def win(self):
+        if not self.won:
+            for row in self.grid:
+                if self.target in row:
+                    return True
+        return False
+    
     def play(self): #player inputs
         while True:
             self.display()
+            if self.win():
+                print ("you reached 2048, you beat the game!")
+                break
             if self.lose():
                 print("There are no more moves, take the L!")
                 break
