@@ -1,6 +1,5 @@
-# ArrenKuk
-# Final project for my Codedex Python certificate - mini course
-# Text version was for programming 12 course in Secondary school
+#Final project for my Codedex Python certificate - mini course
+ Text version was for programming 12 course in Secondary school
 
 # How to play: 
 Same rules as normal 2048, Run the py file, Arrow Keys control
